@@ -1,0 +1,49 @@
+{
+  "name": "prompt-assist",
+  "productName": "PromptAssist",
+  "version": "0.1.0",
+  "description": "Cross-domain professional prompt generator — turn a task brief into an installable Agent Skill package.",
+  "private": true,
+  "type": "module",
+  "main": "./out/main/index.cjs",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "pack": "npm run build && electron-builder --win --dir && node scripts/post-pack.mjs",
+    "pack:dir": "electron-builder --win --dir && node scripts/post-pack.mjs"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "electron": "43.4.0",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "5.0.0",
+    "@rollup/rollup-win32-x64-msvc": "4.64.0"
+  },
+  "build": {
+    "appId": "com.promptassist.desktop",
+    "productName": "PromptAssist",
+    "asar": true,
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}

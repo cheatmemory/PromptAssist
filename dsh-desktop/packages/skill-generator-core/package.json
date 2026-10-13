@@ -1,0 +1,12 @@
+{
+  "name": "skill-generator-core",
+  "version": "0.1.0",
+  "description": "Shared generation core for the cross-domain prompt generator: meta-prompts, section rendering, artifact compilation. Runtime-agnostic — the caller injects the model caller and the output root.",
+  "private": true,
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "license": "MIT"
+}
