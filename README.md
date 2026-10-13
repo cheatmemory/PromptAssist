@@ -167,3 +167,13 @@ skill-generator-core/          ← 规则唯一事实来源
 
 core 不 import `electron`、不 import harness 的包，因此两侧都能干净引用。
 产物格式一致，任一形态生成的技能包两边都能加载。
+
+---
+
+## 许可证
+
+- 本项目主代码以 **MIT** 许可证发布，见 [LICENSE](./LICENSE)。
+- 本仓库内嵌的 `dsh-desktop/packages/skill-generator-core/`（生成规则的唯一事实来源）源自
+  [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop)，同样以 **MIT** 许可证发布
+  （其 `package.json` 中已声明 `"license": "MIT"`）。该目录已随本仓库完整包含，因此本仓库自包含、可独立构建。
+
